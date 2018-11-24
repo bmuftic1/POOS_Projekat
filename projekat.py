@@ -6,7 +6,7 @@ import easygui
 import spasavanjeSlika as ss #poziva se sa ss.SpasiSliku(...)
 
 #limfociti su od 1 do 30
-#nurolimfi od 31 do 60
+#neutrofili od 31 do 60
 #ostatak od 61 do 90
 
 
