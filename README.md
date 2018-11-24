@@ -15,5 +15,7 @@ Features:
 - [x] Image sharpness improvement;
 - [ ] Image quality enhancement.
 
-Copyright [2018] [Muftić, Lemeš & Krupalija, ETF Sarajevo]
+© Muftić Belma, Lemeš Lamija & Krupalija Ehlimana
+
+*Faculty of Electrical Engineering Sarajevo*, 2018.
 

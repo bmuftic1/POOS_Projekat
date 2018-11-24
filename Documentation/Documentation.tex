@@ -9,7 +9,6 @@
 \usepackage{listings}
 \usepackage{amsmath}
 
-% DODANO:
 \renewcommand{\arraystretch}{1.5}
 \begin{document}
 
@@ -108,6 +107,18 @@ Za uklanjanje šuma (zamagljivanje slike - \textit{blurring}) izvršen je izbor 
 
 Za upotrebu je odabran \textbf{bilateralni filter}, jer iako je sporiji od ostalih filtera, ne zamagljuje ivice, čije je očuvanje važno pri analizi krvnih ćelija. \\
 
+Na sljedećoj slici prikazan je prije i nakon vršenja redukcije šuma korištenjem bilateralnog filtera:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{s1SmanjenjeSuma.png}
+\caption{Smanjenje šuma na slici korištenjem bilateralnog filtera}
+
+\end{figure}
+
+\subsection{Maskiranje neoštrina}
+
 Za maskiranje neoštrina izabrana je kernel matrica sa vrijednostima:
 \[
 \begin{bmatrix}
@@ -123,14 +134,66 @@ Za maskiranje neoštrina izabrana je kernel matrica sa vrijednostima:
 
 \subsection{Poboljšavanje kvaliteta slika}
 
-Za poboljšanje kvaliteta slike korištena su sljedeća tri filtera:
+\subsection{Poboljšavanje kontrasta}
 
-\begin{enumerate}
+Za poboljšavanje kontrasta slike korištena su tri različita postupka, koji će biti opisani u nastavku.
 
-\item , zbog... 
-\item , zbog... 
-\item , zbog... 
+\subsubsection{Aritmetičke operacije}
 
-\end{enumerate}
+Kako bi se poboljšao kontrast slike, prvenstveno je neophodno pretvoriti RGB u HLS sliku. Zatim se vrši manipulacija nad pikselima koji označavaju \textit{Luminence} u okviru tako transformisane slike. Koriste se aritmetičke operacije nad pojedinačnim pikselima slike, na sljedeći način:
+
+\begin{itemize}
+
+\item Ukoliko je vrijednost piksela manja od srednje vrijednosti svih \textit{Luminence} piksela, vrši se \textbf{smanjenje vrijednosti piksela} za iznos faktora koji se može prilagođavati (svijetli pikseli postaju svjetliji za iznos faktora);
+\item Ukoliko je vrijednost piksela veća od srednje vrijednosti svih \textit{Luminence} piksela, vrši se \textbf{povećanje vrijednosti piksela} za iznos faktora koji se može prilagođavati (tamni pikseli postaju tamniji za iznos faktora).
+
+\end{itemize}
+
+Na sljedećoj slici prikazan je izgled slike prije i nakon vršenja poboljšanja za vrijednost faktora \texttt{factor = 30}:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{s3Kontrast1.png}
+\caption{Poboljšavanje kontrasta slike korištenjem aritmetičkih operacija}
+
+\end{figure}
+
+\subsection{Povećanje osvjetljenja}
+
+Za povećanje osvjetljenja slike korištena su tri različita postupka, koji će biti opisani u nastavku.
+
+\subsubsection{Aritmetičke operacije}
+
+Kako bi se povećalo osvjetljenje slike, prvenstveno je neophodno pretvoriti RGB u HLS sliku. Zatim se vrši manipulacija nad pikselima koji označavaju \textit{Luminence} u okviru tako transformisane slike. Koristi se aritmetička operacija \textbf{sabiranja} pojedinačnih piksela slike sa iznosom faktora (koji se može prilagođavati).
+
+
+Na sljedećoj slici prikazan je izgled slike prije i nakon vršenja poboljšanja za vrijednost faktora \texttt{factor = 30}:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{s6Osvjetljenje1.png}
+\caption{Povećanje osvjetljenja slike korištenjem aritmetičke operacije sabiranja}
+
+\end{figure}
+
+\subsection{Ujednačavanje histograma}
+
+Za ujednačavanje histograma slike korištena su tri različita postupka, koji će biti opisani u nastavku.
+
+\subsubsection{Raspodjela vjerovatnoća}
+
+Kako bi se ujednačio histogram slike, prvenstveno je neophodno pretvoriti RGB u HLS sliku. Zatim se vrši analiza piksela koji označavaju \textit{Luminence} u okviru tako transformisane slike. Za svaki piksel pronalazi se njegova okolina (čija veličina ovisi o iznosu prilagodljivog faktora), te se zatim pronalazi vrijednost \textbf{piksela s najmanjom frekvencijom pojavljivanja} iz te okoline. Zatim se trenutni piksel izjednačava s tom vrijednošću i vrijednost frekvencije piksela povećava. Na ovaj način postiže se ujednačavanje histograma, odnosno preraspodjela vjerovatnoće pojavljivanja piksela u okolinu. \\
+
+Na sljedećoj slici prikazan je izgled slike i njenog pripadajućeg histograma prije i nakon vršenja ujednačavanja histograma za vrijednost faktora \texttt{factor = 30}:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{s9Histogram1.png}
+\caption{Ujednačavanje histograma slike korištenjem raspodjele vjerovatnoća}
+
+\end{figure}
 
 \end{document}
