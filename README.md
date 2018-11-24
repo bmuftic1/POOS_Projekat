@@ -12,7 +12,7 @@ Features:
 
 - [x] Region of interest (ROI) selection;
 - [x] Image noise reduction;
-- [ ] Image sharpness improvement;
+- [x] Image sharpness improvement;
 - [ ] Image quality enhancement.
 
 Copyright [2018] [Muftić, Lemeš & Krupalija, ETF Sarajevo]
