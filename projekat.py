@@ -14,7 +14,7 @@ koordinate=[]
 
 
 def zapisiKoordinate(x1, y1, x2, y2):
-	file = open("testfile.txt","a") 
+	file = open("testfile.txt", "a")
 
 
 
@@ -80,3 +80,4 @@ for i in range(0, brojSlika):
 			nadjiROI(Slika, c, i)
 			koordinate=[]
 			break
+
