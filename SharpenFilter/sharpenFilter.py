@@ -1,13 +1,11 @@
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy import ndimage
-
 import spasavanjeSlika as ss
 
 
 def sharpenimage (image):
-    image = cv2.imread('image.jpg')
+    image = cv2.imread('image.jpeg')
 
     kernel_sharpening = np.array([[0, -2, 0],
                                   [-2, 9, -2],

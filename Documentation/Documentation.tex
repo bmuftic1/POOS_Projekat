@@ -128,6 +128,17 @@ Za maskiranje neoštrina izabrana je kernel matrica sa vrijednostima:
 \end{bmatrix}
 \]
 
+Na slici ispod prikazan je rezultat izoštravanja u odnosu na originalnu sliku:
+
+
+\begin{figure}[H]
+
+	\center
+	\includegraphics[scale=0.9]{s2MaskiranjeNeostrina.png}
+	\caption{Smanjenje šuma na slici korištenjem filtera za maskiranje neoštrina}
+	
+\end{figure}
+
 \newpage
 
 \section{\textit{DataPrep3}}
@@ -159,6 +170,34 @@ Na sljedećoj slici prikazan je izgled slike prije i nakon vršenja poboljšanja
 
 \end{figure}
 
+\subsubsection{Linearno razvlačenje kontrasta}
+
+Drugi metod poboljšanja kontrasta slike postiže se manipulacijom nad pojedinačnim kanalima slike. Svaka vrijednost piksela se određuje u zavisnosti od vrijednosti susjednih piksela. Intenzitet se izračunava pomoću formule za normalizaciju:
+\[
+	I_o = (I_i - Min_i) * (((Max_o - Min_o) / (Max_i - Min_i)) + Min_o)
+\]
+
+Gdje su vrijednosti:
+
+\begin{itemize}
+\item I\textsubscript{o} - Izlazna vrijednost piksela
+\item I\textsubscript{i} - Ulazna vrijednost piksela
+\item Min\textsubscript{i} - Minimalna vrijednost piksela u ulaznoj slici
+\item Max\textsubscript{i} - Maksimalna vrijednost piksela u ulaznoj slici
+\item Min\textsubscript{o} - Minimalna vrijednost piksela u izlaznoj slici
+\item Max\textsubscript{o} - Maksimalna vrijednost piksela u izlaznoj slici
+\end{itemize}
+
+Na sljedećoj slici prikazan je izgled slike prije i nakon linearnog razvlačenja kontrasta:
+
+\begin{figure}[H]
+
+	\center
+	\includegraphics[scale=0.9]{s3Kontrast2.png}
+	\caption{Poboljšavanje kontrasta slike korištenjem linearnog razvlačenja}
+	
+\end{figure}
+
 \subsection{Povećanje osvjetljenja}
 
 Za povećanje osvjetljenja slike korištena su tri različita postupka, koji će biti opisani u nastavku.
@@ -178,6 +217,20 @@ Na sljedećoj slici prikazan je izgled slike prije i nakon vršenja poboljšanja
 
 \end{figure}
 
+\subsubsection{Linearne transformacije}
+
+Drugi metod za povećanje osvjetljenja slike podrazumijeva primjenu linearnih transformacija. Konkretno promjena vrijednosti parametra beta u OpenCV funkciji \textit{convertScaleAbs}.
+
+Na sljedećoj slici je izgled slike prije i nakon povećanja osvjetljenja postavljanjem vrijednosti parametra beta na 20 (moguće su vrijednosti od 0 do 100):
+
+\begin{figure}[H]
+
+	\center
+	\includegraphics[scale=0.9]{s6Osvjetljenje2.png}
+	\caption{Povećanje osvjetljenja slike korištenjem linearne transformacije}
+	
+\end{figure}
+
 \subsection{Ujednačavanje histograma}
 
 Za ujednačavanje histograma slike korištena su tri različita postupka, koji će biti opisani u nastavku.
@@ -194,6 +247,20 @@ Na sljedećoj slici prikazan je izgled slike i njenog pripadajućeg histograma p
 \includegraphics[scale=0.9]{s9Histogram1.png}
 \caption{Ujednačavanje histograma slike korištenjem raspodjele vjerovatnoća}
 
+\end{figure}
+
+\subsubsection{CLAHE}
+
+Drugi metod ujednačavanja histograma slike jeste CLAHE (eng. \textit{Contrast Limited Adaptive Histogram Equalization}). Da bi se omogućilo korištenje ovog tipa ujednačavanja, sliku je bilo potrebno prethodno pretvoriti u \textit{grayscale}.
+
+Na sljedećoj slici prikazan je izgled slike i njenog histograma prije i nakon izvršenja ujednačavanja histograma za vrijednost faktora \texttt{factor = 10}:
+
+\begin{figure}[H]
+
+	\center
+	\includegraphics[scale=0.9]{s9Histogram2.png}
+	\caption{Ujednačavanje histograma slike korištenjem CLAHE}
+	
 \end{figure}
 
 \end{document}
