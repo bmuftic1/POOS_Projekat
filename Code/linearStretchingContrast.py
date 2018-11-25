@@ -58,7 +58,7 @@ def proba():
     plt.show()
     ss.spasiSliku("ContrastImages", "image", 2, enhancedImage)
 
-os.chdir('..')
+
 for i in range(0, 90):
     slika = cv2.imread('./ROI/{}_ROI.jpg'.format(i+1))
     nova = increaseContrast(slika, 30)
