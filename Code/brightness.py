@@ -20,5 +20,5 @@ def pozoviBrightness():
 
 		ss.spasiSliku("Brightness", "BrightnessHSV", i+1, img)
 
-os.chdir('..')
+
 pozoviBrightness()
