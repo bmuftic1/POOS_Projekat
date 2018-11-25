@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{listings}
 \usepackage{amsmath}
+\usepackage{hyperref}
 
 \renewcommand{\arraystretch}{1.5}
 \begin{document}
@@ -87,7 +88,23 @@ Nakon toga potrebno je izdvojiti ćeliju i označiti njenu poziciju na slici.
 
 ~\\
 
-Za svrhe ovog projekta biti će upotrijebljeno ukupno \textbf{90 slika} (po \textbf{30 slika} za sve tri klase: \textit{Neutrophils}, \textit{Lymhocythes}, ostalo).
+Za svrhe ovog projekta biti će upotrijebljeno ukupno \textbf{90 slika} (po \textbf{30 slika} za sve tri klase: \textit{Neutrophils}, \textit{Lymhocythes}, ostalo). \\
+
+Cijeli projekat dostupan je na \textit{GitHub}-u, na sljedećem linku: \url{https://github.com/bmuftic1/POOS_Projekat}
+
+\newpage
+
+\section{\textit{DataPrep1}}
+
+Iz foldera \textit{DataSet} učitavaju se slike, jedna po jedna, te se regija od interesa treba označiti tako što se nacrta pravougaonik oko ćelije. Pravougaonik se crta tako što se pritisne na gornji lijevi ugao željene regije, a potom se povuče preko slike sve do donjeg desnog ugla regije od interesa. Kada se to uradi, onda će se pojaviti zeleni pravougaonik, te ako se pritisne \textbf{C}, slika će izdvojiti regiju i nastaviti dalje, a ako se pritisne \textbf{R}, resetuje se slika. Istovremeno se u datoteci \textit{KoordinateROI.txt} pamte koordinate prethodno spomenutih uglova, a struktura datoteke je:
+
+\begin{center}
+
+\texttt{NazivSlike x1,y1,x2,y2}
+
+\end{center}
+
+Slike se spašavaju u folder \textit{ROI}, a kod koji sadrži kreiranje anotacija, kao i slike na kojima je primjenjena maska se nalazi u folderu \textit{Code} pod nazivom \textit{kreiranjeROI.py}. Također, izdvojena je datoteka \textit{spasavanjeSlike.py}, tako da se može koristiti i u narednim zadacima.
 
 \newpage
 
@@ -117,6 +134,8 @@ Na sljedećoj slici prikazan je prije i nakon vršenja redukcije šuma korišten
 
 \end{figure}
 
+\newpage
+
 \subsection{Maskiranje neoštrina}
 
 Za maskiranje neoštrina izabrana je kernel matrica sa vrijednostima:
@@ -133,9 +152,9 @@ Na slici ispod prikazan je rezultat izoštravanja u odnosu na originalnu sliku:
 
 \begin{figure}[H]
 
-	\center
-	\includegraphics[scale=0.9]{s2MaskiranjeNeostrina.png}
-	\caption{Smanjenje šuma na slici korištenjem filtera za maskiranje neoštrina}
+\center
+\includegraphics[scale=0.9]{s2MaskiranjeNeostrina.png}
+\caption{Izoštravanje slike korištenjem filtera za maskiranje neoštrina}
 	
 \end{figure}
 
@@ -145,11 +164,13 @@ Na slici ispod prikazan je rezultat izoštravanja u odnosu na originalnu sliku:
 
 \subsection{Poboljšavanje kvaliteta slika}
 
-\subsection{Poboljšavanje kontrasta}
+\subsubsection{Poboljšavanje kontrasta}
 
 Za poboljšavanje kontrasta slike korištena su tri različita postupka, koji će biti opisani u nastavku.
 
-\subsubsection{Aritmetičke operacije}
+\begin{enumerate}
+
+\item \textbf{Aritmetičke operacije}: \\
 
 Kako bi se poboljšao kontrast slike, prvenstveno je neophodno pretvoriti RGB u HLS sliku. Zatim se vrši manipulacija nad pikselima koji označavaju \textit{Luminence} u okviru tako transformisane slike. Koriste se aritmetičke operacije nad pojedinačnim pikselima slike, na sljedeći način:
 
@@ -170,9 +191,12 @@ Na sljedećoj slici prikazan je izgled slike prije i nakon vršenja poboljšanja
 
 \end{figure}
 
-\subsubsection{Linearno razvlačenje kontrasta}
+\newpage
+
+\item \textbf{Linearno razvlačenje kontrasta}: \\
 
 Drugi metod poboljšanja kontrasta slike postiže se manipulacijom nad pojedinačnim kanalima slike. Svaka vrijednost piksela se određuje u zavisnosti od vrijednosti susjednih piksela. Intenzitet se izračunava pomoću formule za normalizaciju:
+
 \[
 	I_o = (I_i - Min_i) * (((Max_o - Min_o) / (Max_i - Min_i)) + Min_o)
 \]
@@ -180,29 +204,57 @@ Drugi metod poboljšanja kontrasta slike postiže se manipulacijom nad pojedina�
 Gdje su vrijednosti:
 
 \begin{itemize}
-\item I\textsubscript{o} - Izlazna vrijednost piksela
-\item I\textsubscript{i} - Ulazna vrijednost piksela
-\item Min\textsubscript{i} - Minimalna vrijednost piksela u ulaznoj slici
-\item Max\textsubscript{i} - Maksimalna vrijednost piksela u ulaznoj slici
-\item Min\textsubscript{o} - Minimalna vrijednost piksela u izlaznoj slici
-\item Max\textsubscript{o} - Maksimalna vrijednost piksela u izlaznoj slici
+
+\item \texttt{I$_o$} - Izlazna vrijednost piksela
+\item \texttt{I$_i$} - Ulazna vrijednost piksela
+\item \texttt{Min$_i$} - Minimalna vrijednost piksela u ulaznoj slici
+\item \texttt{Max$_i$} - Maksimalna vrijednost piksela u ulaznoj slici
+\item \texttt{Min$_o$} - Minimalna vrijednost piksela u izlaznoj slici
+\item \texttt{Max$_o$} - Maksimalna vrijednost piksela u izlaznoj slici
+
 \end{itemize}
 
 Na sljedećoj slici prikazan je izgled slike prije i nakon linearnog razvlačenja kontrasta:
 
 \begin{figure}[H]
 
-	\center
-	\includegraphics[scale=0.9]{s3Kontrast2.png}
-	\caption{Poboljšavanje kontrasta slike korištenjem linearnog razvlačenja}
+\center
+\includegraphics[scale=0.9]{s4Kontrast2.png}
+\caption{Poboljšavanje kontrasta slike korištenjem linearnog razvlačenja}
 	
 \end{figure}
 
-\subsection{Povećanje osvjetljenja}
+\newpage
+
+\item \textbf{\textit{Gamma} korekcija}: \\
+
+Za ovaj zadatak korištena je \textit{gamma} korekcija koja transformiše datu sliku prema formuli:
+
+\[NovaSlika = Slika^{\frac{1}{gamma}}\]
+
+gdje je \texttt{gamma} vrijednost koju mi zadajemo. \\
+
+Novu sliku je potrebno korigovati tako da su vrijednosti piksela u opsegu 0 do 255, uključivo. Za vrijednost \texttt{gamma} je odabrano 0.7, kako se treba istaći ljubičasti dio regije od interesa. Samo računanje novih vrijednosti piksela je urađeno preko LUT (\textit{lookup table}), gdje su se pikseli originalne slike mapirali u piksele \texttt{gamma} korigovane slike prema navedenoj formuli. Rezultat poboljšanja kontrasta je prikazan na sljedećoj slici:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{s5Kontrast3.png}
+\caption{Poboljšavanje kontrasta slike korištenjem \textit{gamma} korekcije}
+	
+\end{figure}
+
+\end{enumerate}
+
+\newpage
+
+\subsubsection{Povećanje osvjetljenja}
 
 Za povećanje osvjetljenja slike korištena su tri različita postupka, koji će biti opisani u nastavku.
 
-\subsubsection{Aritmetičke operacije}
+\begin{enumerate}
+
+\item \textbf{Aritmetičke operacije}: \\
 
 Kako bi se povećalo osvjetljenje slike, prvenstveno je neophodno pretvoriti RGB u HLS sliku. Zatim se vrši manipulacija nad pikselima koji označavaju \textit{Luminence} u okviru tako transformisane slike. Koristi se aritmetička operacija \textbf{sabiranja} pojedinačnih piksela slike sa iznosom faktora (koji se može prilagođavati).
 
@@ -217,25 +269,47 @@ Na sljedećoj slici prikazan je izgled slike prije i nakon vršenja poboljšanja
 
 \end{figure}
 
-\subsubsection{Linearne transformacije}
+\newpage
+
+\item \textbf{Linearne transformacije}: \\
 
 Drugi metod za povećanje osvjetljenja slike podrazumijeva primjenu linearnih transformacija. Konkretno promjena vrijednosti parametra beta u OpenCV funkciji \textit{convertScaleAbs}.
 
-Na sljedećoj slici je izgled slike prije i nakon povećanja osvjetljenja postavljanjem vrijednosti parametra beta na 20 (moguće su vrijednosti od 0 do 100):
+Na sljedećoj slici je izgled slike prije i nakon povećanja osvjetljenja postavljanjem vrijednosti parametra \texttt{beta} na 20 (moguće su vrijednosti od 0 do 100):
 
 \begin{figure}[H]
 
-	\center
-	\includegraphics[scale=0.9]{s6Osvjetljenje2.png}
-	\caption{Povećanje osvjetljenja slike korištenjem linearne transformacije}
+\center
+\includegraphics[scale=0.9]{s7Osvjetljenje2.png}
+\caption{Povećanje osvjetljenja slike korištenjem linearne transformacije}
 	
 \end{figure}
 
-\subsection{Ujednačavanje histograma}
+\newpage
+
+\item \textbf{Manipulacija HSV slike}: \\
+
+Korištena je manipulacija intenziteta treće komponente HSL-a, tj. \textit{lightness}. Faktor kojim se poboljšava osvjetljenje je 40, te u slučaju da zbir trenutne vrijednosti treće komponente piksela i faktora ima vrijednost veću od 255, vrijednost se postavlja na 255, u suprotnom, nova vrijednost postaje pomenuti zbir. Nakon korekcije treće komponente, sve tri komponente se spajaju u HSV sliku, koja se zatim pretvori u BGR vrijednost, i spasi u folder \textit{Brightness}. Sljedeća slika prikazuje promjenu osvjetljenja odabrane slike pomoću manipulacije HSV:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{s8Osvjetljenje3.png}
+\caption{Povećanje osvjetljenja slike korištenjem manipulacije HSV slike}
+	
+\end{figure}
+
+\end{enumerate}
+
+\newpage
+
+\subsubsection{Ujednačavanje histograma}
 
 Za ujednačavanje histograma slike korištena su tri različita postupka, koji će biti opisani u nastavku.
 
-\subsubsection{Raspodjela vjerovatnoća}
+\begin{enumerate}
+
+\item \textbf{Raspodjela vjerovatnoća}: \\
 
 Kako bi se ujednačio histogram slike, prvenstveno je neophodno pretvoriti RGB u HLS sliku. Zatim se vrši analiza piksela koji označavaju \textit{Luminence} u okviru tako transformisane slike. Za svaki piksel pronalazi se njegova okolina (čija veličina ovisi o iznosu prilagodljivog faktora), te se zatim pronalazi vrijednost \textbf{piksela s najmanjom frekvencijom pojavljivanja} iz te okoline. Zatim se trenutni piksel izjednačava s tom vrijednošću i vrijednost frekvencije piksela povećava. Na ovaj način postiže se ujednačavanje histograma, odnosno preraspodjela vjerovatnoće pojavljivanja piksela u okolinu. \\
 
@@ -249,7 +323,9 @@ Na sljedećoj slici prikazan je izgled slike i njenog pripadajućeg histograma p
 
 \end{figure}
 
-\subsubsection{CLAHE}
+\newpage
+
+\item \textbf{CLAHE}: \\
 
 Drugi metod ujednačavanja histograma slike jeste CLAHE (eng. \textit{Contrast Limited Adaptive Histogram Equalization}). Da bi se omogućilo korištenje ovog tipa ujednačavanja, sliku je bilo potrebno prethodno pretvoriti u \textit{grayscale}.
 
@@ -257,10 +333,26 @@ Na sljedećoj slici prikazan je izgled slike i njenog histograma prije i nakon i
 
 \begin{figure}[H]
 
-	\center
-	\includegraphics[scale=0.9]{s9Histogram2.png}
-	\caption{Ujednačavanje histograma slike korištenjem CLAHE}
+\center
+\includegraphics[scale=0.9]{s10Histogram2.png}
+\caption{Ujednačavanje histograma slike korištenjem CLAHE}
 	
 \end{figure}
+
+\newpage
+
+\item \textbf{\texttt{equalizeHist}}: \\
+
+Za ujednačavanje histograma korištena je funkcija \texttt{equalizeHist} iz biblioteke cv2, i to nad svim \textit{channels} od date RGB slike, nakon čega je ista spašena u folder \textit{Histogram}. Na sljedećoj slici je prikazan rezultat primjene ove funkcije:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{s11Histogram3.png}
+\caption{Ujednačavanje histograma slike korištenjem \texttt{equalizeHist}}
+	
+\end{figure}
+
+\end{enumerate}
 
 \end{document}
