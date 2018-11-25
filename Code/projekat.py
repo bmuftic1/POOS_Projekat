@@ -35,7 +35,7 @@ ab
 b
 lb
 
-Kreiranje svih verzija za izjednacavanje histograma
+#Kreiranje svih verzija za izjednacavanje histograma
 iz
 ae
 pe
