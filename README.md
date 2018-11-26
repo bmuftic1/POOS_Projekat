@@ -13,7 +13,7 @@ Features:
 - [x] Region of interest (ROI) selection;
 - [x] Image noise reduction;
 - [x] Image sharpness improvement;
-- [ ] Image quality enhancement.
+- [x] Image quality enhancement (contrast, brightness and histogram equalization).
 
 © Muftić Belma, Lemeš Lamija & Krupalija Ehlimana
 
