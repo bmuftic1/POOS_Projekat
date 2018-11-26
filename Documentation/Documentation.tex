@@ -355,4 +355,22 @@ Za ujednačavanje histograma korištena je funkcija \texttt{equalizeHist} iz bib
 
 \end{enumerate}
 
+\newpage
+
+\section{\textit{DataPrep4}}
+
+Kreiran je file \textit{podjela.py} koji definiše kako će se \textit{dataset} podijeliti, gdje je odlučeno da podjela bude sljedeća:
+
+\begin{itemize}
+
+\item \textbf{Validacija (10\%)}: Po 3 slike za svaku klasu, dakle ukupno 9 slika;
+\item \textbf{Test (25\%)}: Po 7 slika za svaku klasu, dakle ukupno 21 slika;
+\item \textbf{Trening (65\%)}: Po 19 slika za svaku klasu, dakle ukupno 60 slika.
+
+\end{itemize}
+
+Kako su slike poredane tako da se one sa brojevima između 1 i 30 uključivo nalaze u prvoj klasi, one sa brojevima između 31 i 60 u drugoj klasi, a slike sa brojevima u nazivu između 61 i 90 pripadaju klasi tri, tako je moguće izvršiti ravnopravnu podjelu tako da svaka klasa bude zastupljena u svakom skupu. Prvo se kreiraju folderi \textit{Validacija}, \textit{Test} i \textit{Train} (u slučaju da već ne postoje), te se nasumice generišu brojevi između prethodno spomenutih intervala. Slike sa datim brojem se potom kopiraju u odgovarajući folder. Dovoljno je samo pokrenuti datoteku, bez poziva funkcija, kako se kod nalazi u \texttt{main} funkciji. \\
+
+Također, važno je naznačiti da se svaka \textit{.py} datoteka može uključiti kao \textit{.dll} i nije potrebno pozivati određene funkcije unutar njih, već samo pozvati sami modul, te će on izvršiti ono što se nalazi u \texttt{main} funkciji (primjer upotrebe se nalazi u \textit{projekat.py}).
+
 \end{document}
