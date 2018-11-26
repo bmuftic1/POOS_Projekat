@@ -18,7 +18,7 @@ if (os.path.isdir("Validacija")==False):
 	os.mkdir("Validacija")
 
 #10% validacija - 3 slike po klasi
-#25% test - 8 slika po klasi
+#25% test - 7 slika po klasi
 #65% train - 19 slika po klasi
 
 odabraniBrojeviValidacija=[]
