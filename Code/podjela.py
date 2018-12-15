@@ -2,20 +2,20 @@ import random as random
 import os
 import cv2
 
-naziv="ROI"
-folder="ROI"
+naziv="CroppedROI"
+folder="../CroppedROI"
 
-if (os.path.isdir("Train")==False):
+if (os.path.isdir("../Train")==False):
 	#kreiraj folder
-	os.mkdir("Train")
+	os.mkdir("../Train")
 
-if (os.path.isdir("Test")==False):
+if (os.path.isdir("../Test")==False):
 	#kreiraj folder
-	os.mkdir("Test")
+	os.mkdir("../Test")
 
-if (os.path.isdir("Validacija")==False):
+if (os.path.isdir("../Validacija")==False):
 	#kreiraj folder
-	os.mkdir("Validacija")
+	os.mkdir("../Validacija")
 
 #10% validacija - 3 slike po klasi
 #25% test - 7 slika po klasi
@@ -37,8 +37,8 @@ while(True):
 	if(r in odabraniBrojeviValidacija):
 		continue
 	odabraniBrojeviValidacija.append(r)
-	I = cv2.imread("{}/{}{}.jpg".format(folder, naziv, r))
-	cv2.imwrite('Validacija/{}{}.jpg'.format(naziv, r), I)
+	I = cv2.imread("{}/{}.jpeg".format("../DataSet", r))
+	cv2.imwrite('../Validacija/{}{}.jpg'.format(naziv, r), I)
  
 odabraniBrojeviTest=[]
 
@@ -59,14 +59,14 @@ while(True):
 		continue
 	odabraniBrojeviTest.append(r)
 
-	I = cv2.imread("{}/{}{}.jpg".format(folder, naziv, r))
-	cv2.imwrite('Test/{}{}.jpg'.format(naziv, r), I)
+	I = cv2.imread("{}/{}_{}.jpg".format(folder, r, naziv))
+	cv2.imwrite('../Test/{}{}.jpg'.format(naziv, r), I)
 
 
 #Train
 for i in range(0,90):
 	if (i+1 in odabraniBrojeviTest or i+1 in odabraniBrojeviValidacija):
 		continue
-	I = cv2.imread("{}/{}{}.jpg".format(folder, naziv, i+1))
-	cv2.imwrite('Train/{}{}.jpg'.format( naziv, i+1), I)
+	I = cv2.imread("{}/{}_{}.jpg".format(folder, i + 1, naziv))
+	cv2.imwrite('../Train/{}{}.jpg'.format( naziv, i+1), I)
 

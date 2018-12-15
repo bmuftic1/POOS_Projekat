@@ -14,6 +14,7 @@ Features:
 - [x] Image noise reduction;
 - [x] Image sharpness improvement;
 - [x] Image quality enhancement (contrast, brightness and histogram equalization).
+- [x] ROI cropping and filter applying.
 
 © Muftić Belma, Lemeš Lamija & Krupalija Ehlimana
 
