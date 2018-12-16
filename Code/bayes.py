@@ -3,12 +3,9 @@ import numpy as np
 import pandas as pd
 import math
 import os as os
-import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
-from sklearn import neighbors, metrics
-from sklearn import svm
 from sklearn.naive_bayes import GaussianNB
-from sklearn.model_selection import KFold, cross_val_score,LeaveOneOut, StratifiedKFold
+from sklearn.naive_bayes import BernoulliNB
 
 os.chdir('..')
 
@@ -18,6 +15,7 @@ train = train[:,0:7]
 
 test = pd.read_csv('./DeskriptorTest.csv').as_matrix()
 test=test.reshape(21,7)
+
 model = GaussianNB()
 model.fit(train, outcome)
 predicted = model.predict(test)
@@ -25,7 +23,24 @@ predicted = model.predict(test)
 truth = [1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3]
 
 acc = accuracy_score(predicted, truth)
-print("Accuracy sa accuracy_score za citav model: {}\n".format(acc))
+print("Accuracy sa accuracy_score za citav model (Gaussian bez priors): {}\n".format(acc))
+
+model = GaussianNB(priors=[0.8,0.1,0.1])
+model.fit(train, outcome)
+predicted = model.predict(test)
+
+acc = accuracy_score(predicted, truth)
+print("Accuracy sa accuracy_score za citav model (Gaussian sa priors): {}\n".format(acc))
+
+
+model = BernoulliNB()
+model.fit(train, outcome)
+pred = model.predict(test)
+
+
+acc = accuracy_score(pred, truth)
+print("Accuracy sa accuracy_score za citav model (Bernoulli): {}\n".format(acc))
+
 
 confusionMatrix = [[0,0,0], [0,0,0],[0,0,0]]
 
