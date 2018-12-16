@@ -8,6 +8,45 @@
 \usepackage{float}
 \usepackage{listings}
 
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
 
 % DODANO:
 \renewcommand{\arraystretch}{1.5}
@@ -69,9 +108,15 @@ Budući da \textit{dataset} ima manje od 100,000 slika, te postoje tekstualni po
 
 \newpage
 
-\section{Izbor deskriptora}
+\section{Izbor i kreiranje deskriptora}
 
+Odabran je \textbf{\textit{HuMoments}} deskriptor, kako on opisuje oblik željenog objekta, a prepoznavanje ćelije se oslanja prvenstveno na njen oblik. U svrhu toga je kreirana skripta  \texttt{maskiranje.py} koja izloira samu ćeliju (dakle bez pozadine), jer se \textit{HuMoments} oslanja na analizu slika sa jednim kanalom.\\
+~\\
+Maskiranje je zasnovano na izdvajanju piksela koji spadaju u određeni rang vrijednosti, nakon čega se radi otvaranje da bi se uklonili ''zalutali'' pikseli, te se radi i dilatacija da bi se uključile i granice ćelije koje prethodno nisu bile u zadatom rasponu. Nakon maskiranja je pozvana funkcija \texttt{HuMoments} koja vraća niz brojeva koji opisuju oblik prethodno dobivene binarne slike. Nakon normalizacije niza, vrijednosti se zapisuju u CSV datoteku, te ako su u pitanju \textit{Train} slike, upisuje se i kojoj klasi slike pripadaju.\\
+~\\
+Navedene funkcionalnosti implementirane su na sljedeći način:\\
 
+\pythonexternal{deskriptori.py}
 
 \newpage
 
@@ -116,5 +161,29 @@ Od tri implementirane metode, najbolje rezultate pokazala je metoda \textbf{CLAH
 \caption{Rezultati korištenja različitih metoda za ujednačavanje histograma}
 	
 \end{figure}
+
+\newpage
+
+\section{Testiranje modela}
+
+Kreirani deskriptori koriste se za treniranje i testiranje modela, pri čemu veoma važan aspekt predstavlja varijabla \texttt{confusionMatrix}, koja sadrži sve relevantne informacije o performansama modela. Na Slici 5. vidljivo je da je tačnost modela oko \textbf{76 \%}, te da najveću specifičnost pokazuje \textbf{klasa 1}, dok najveću senzitivnost pokazuje \textbf{klasa 2}. Najmanje vrijednosti specifičnosti i senzitivnosti ima \textbf{klasa 3}.
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{slikaTest.png}
+\caption{Rezultati pokretanja modela za prepoznavanje}
+	
+\end{figure}
+
+\newpage
+
+\section{Poboljšavanje performansi modela za prepoznavanje}
+
+\subsection{Izmjena parametara modela}
+
+\subsection{Drukčija podjela podataka}
+
+\subsection{Izbacivanje \textit{outlier}-a slika}
 
 \end{document}
