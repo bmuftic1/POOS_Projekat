@@ -25,7 +25,7 @@ truth = [1,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,3,3,3]
 acc = accuracy_score(predicted, truth)
 print("Accuracy sa accuracy_score za citav model (Gaussian bez priors): {}\n".format(acc))
 
-model = GaussianNB(priors=[0.8,0.1,0.1])
+model = GaussianNB(priors=[0.9, 0.05, 0.05])
 model.fit(train, outcome)
 predicted = model.predict(test)
 
