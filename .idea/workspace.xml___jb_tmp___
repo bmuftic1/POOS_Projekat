@@ -5,6 +5,9 @@
       <change afterPath="$PROJECT_DIR$/Code/kMeansWithoutAssignment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DeskriptorClusteringTrain.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DeskriptorClusteringTrain.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Task 2/Documentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Task 2/Documentation.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Task 2/Documentation.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Task 2/Documentation.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Task 2/Documentation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Task 2/Documentation.tex" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +39,7 @@
     <session id="-279726867">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.326" value="1" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.78" value="1" />
@@ -55,43 +58,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3037" />
+          <entry key="py" value="3066" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3037" />
+          <entry key="Python" value="3066" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Code/kMeansWithoutAssignment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Code/bayesClustering.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,7 +108,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="35" />
     <option name="width" value="980" />
@@ -353,9 +331,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19122024" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19122024" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -368,7 +345,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.2749616" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006935" side_tool="true" weight="0.33239037" />
-      <window_info anchor="bottom" id="Python Console" order="10" visible="true" weight="0.23567921" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.68576103" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -575,8 +552,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/kMeansWithoutAssignment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="65" column="51" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
+        <state relative-caret-position="107">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
