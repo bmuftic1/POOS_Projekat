@@ -21,7 +21,7 @@ Features:
 - [x] ROI cropping and filter applying;
 - [x] Creating descriptors for images;
 - [x] Model training and testing;
-- [] Model exportation.
+- [ ] Model exportation.
 
 © Muftić Belma, Lemeš Lamija & Krupalija Ehlimana
 
