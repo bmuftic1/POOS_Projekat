@@ -1,0 +1,29 @@
+NAPOMENA
+
+
+Pošto se generišu sve slike za filtere, izvršavanje projekta traje dugo (oko 20 minuta), te su ovdje priložene rezultujuće slike nakon pokretanja. Na konsultacijama ćemo se odlučiti koje ćemo filtere iskoristiti za sljedeće faze projekta. Shodno tome, iako nisu kreirani folderi za train, test i validaciju, file podjela.py sadrži generisanje pomenutih foldera, te je i testirana (dakle, nakon odluke o filterima, samo ju je potrebno pokrenuti).
+Također, potrebna je instalacija PIL .dll-a ako želite pokrenuti linearStretchingContrast.py.
+Sto se tiče foldera, u nastavku slijedi objašnjenje šta koji folder sadrži:
+
+1. Code - sve funkcije koje su korištene u projektnom zadatku.
+
+2. Documentation - dokumentacija za projektni zadatak 1.
+
+3. DataSet - odabrani skup slika za projekat.
+
+4. ROI - Regija od interesa
+
+5. DenoiseFilter - rezultujuće slike nakon upotrebe denoise filtera nad ROI slikama.
+
+6. SharpenFilter - rezultujuće slike nakon upotrebe sharpen filtera nad ROI slikama.
+
+7. CombinedDenoiseSharpen - rezultujuće slike nakon upotrebe sharpen filtera nad denoise slikama.
+
+8. Brightness - sadrži rezultate filtera za brightness odrađenih nad slikama iz foldera ROI. U nazivu svake slike stoji o kojem se filteru radi.
+
+9. Contrast - sadrži rezultate filtera za contrast odrađenih nad slikama iz foldera ROI. U nazivu svake slike stoji o kojem se filteru radi.
+
+10. Histogram - sadrži rezultate filtera za izjednačavanje histograma odrađenih nad slikama iz foldera ROI. U nazivu svake slike stoji o kojem se filteru radi.
+
+
+Krupalija, Lemeš, Muftić

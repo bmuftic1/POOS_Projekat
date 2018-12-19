@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Izbor modela za prepoznavanje}{1}
+\contentsline {section}{\numberline {2}Izbor i kreiranje deskriptora}{2}
+\contentsline {section}{\numberline {3}Izbor metoda poboljšanja}{3}
+\contentsline {subsection}{\numberline {3.1}Poboljšavanje kontrasta}{3}
+\contentsline {subsection}{\numberline {3.2}Poboljšavanje osvjetljenja}{4}
+\contentsline {subsection}{\numberline {3.3}Ujednačavanje histograma}{5}
+\contentsline {section}{\numberline {4}Testiranje modela}{6}
+\contentsline {section}{\numberline {5}Poboljšavanje performansi modela za prepoznavanje}{7}
+\contentsline {subsection}{\numberline {5.1}Izmjena parametara modela}{7}
+\contentsline {subsection}{\numberline {5.2}Drukčija podjela podataka}{8}
+\contentsline {subsection}{\numberline {5.3}Izbacivanje \textit {outlier}-a slika}{8}
