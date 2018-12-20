@@ -246,6 +246,28 @@ Tačnost modela pokazala je tendenciju poboljšavanja s povećanjem vrijednosti 
 
 \subsection{Drukčija podjela podataka}
 
+Kako bi se postiglo poboljšavanje performansi, potrebno je izvršiti dalje treniranje klasifikatora, iz kojeg razloga je podjela podataka promijenjena na sljedeće vrijednosti:
+
+\begin{itemize}
+
+\item \textit{Trening}: 80\% podataka (odnosno, 24 slike po klasi);
+\item \textit{Test}: 10\% podataka (odnosno, 3 slike po klasi);
+\item \textit{Validacija}: 10\% podataka (odnosno, 3 slike po klasi).
+
+\end{itemize}
+
+Nakon ponovnog pokretanja modela, dobiveni su sljedeći rezultati:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{slikaDrukcijaRaspodjela.png}
+\caption{Rezultati pokretanja modela za prepoznavanje nakon ponovne raspodjele podataka}
+	
+\end{figure}
+
+Vidljivo je da se tačnost modela povećala na oko \textbf{89\%}, te da su vrijednosti senzitivnosti i specifičnosti za klase 1 i 2 približno jednake 1, dok su za klasu 3 te vrijednosti opale na nulu. Ovo je posljedica \textit{overfitting}-a, odnosno zbog prevelikog treninga (nad 80\% podataka) dolazi do \textit{false positive} detekcija ćelija na slikama koje ih ne sadrže, iz kojeg razloga su performanse za treću klasu ovako niske.
+
 \subsection{Izbacivanje \textit{outlier}-a slika}
 
 Za bolju raspodjelu podataka u postojeće klase implementirana je funkcija \texttt{kMeansClustering} koja vrši raspodjelu podataka u \textit{cluster}-e u okviru iterativnog postupka, koji se sastoji iz sljedećih akcija:
@@ -330,5 +352,21 @@ Za sve druge vrijednosti navedenih parametra postignute su gore performanse (npr
 \caption{Rezultati pokretanja modela za prepoznavanje nakon vršenja \textit{clustering}-a bez dodjele klasa}
 	
 \end{figure}
+
+\newpage
+
+\subsection{Proširenje \textit{dataset}-a}
+
+\textit{Dataset} je proširen sa ukupno \textbf{60 slika}, tako da je ukupan broj slika porastao sa 90 na 150, a broj slika po klasi sa 30 na 50 slika. Nakon vršenja novog izdvajanja i modifikacije ROI-a, izdvajanja deskriptora te treniranja i testiranja modela, postignuti su sljedeći rezultati:
+
+\begin{figure}[H]
+
+\center
+\includegraphics[scale=0.9]{slikaExtended.png}
+\caption{Rezultati pokretanja modela za prepoznavanje nakon vršenja proširenja \textit{dataset}-a}
+	
+\end{figure}
+
+Vidljivo je da je tačnost modela spala na oko \textbf{54\%}, što je dokaz da vršenje ovakvog proširenja \textit{dataset}-a ne samo da nije pozitivno utjecalo na moć detekcije, već je zbog prevelike količine informacije uzrokovalo pogoršanje modela za detekciju. Senzitivnost klase 1 ostala je maksimalna (1.0), dok su se senzitivnosti klasa 2 i 3 drastično smanjile, što dovodi do zaključka da je model previše istreniran za podatke iz klase 1, te da većinu podataka pogrešno dodjeljuje toj klasi, te da ga je potrebno dodatno trenirati na ostale dvije klase kako bi se njihova senzitivnost povećala.
 
 \end{document}

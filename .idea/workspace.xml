@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af0aa21-91e9-4a6c-aec0-fecd610c7d5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Code/extendedBayes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/extendedMasking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/extendedPartition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/extendedROI.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/extendedROICrop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/modifiedBayes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/modifiedMasking.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/kreiranjeROI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/kreiranjeROI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Task 2/Documentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Task 2/Documentation.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Task 2/Documentation.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Task 2/Documentation.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/Task 2/Documentation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/Task 2/Documentation.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/modelExportBernoulliNB.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Model/modelExportBernoulliNB.sav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/modelExportGaussianNB.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Model/modelExportGaussianNB.sav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/modelExportGaussianNBCustom.sav" beforeDir="false" afterPath="$PROJECT_DIR$/Model/modelExportGaussianNBCustom.sav" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,9 +106,40 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-744573699">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="extendedBayes" value="7" />
+          <entry key="modifiedBayes" value="6" />
+          <entry key="py" value="553" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="566" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -128,7 +173,16 @@
         <option value="$PROJECT_DIR$/Code/bayesClustering.py" />
         <option value="$PROJECT_DIR$/Code/kMeans.py" />
         <option value="$PROJECT_DIR$/Code/kMeansWithoutAssignment.py" />
+        <option value="$PROJECT_DIR$/Code/modifiedPartition.py" />
+        <option value="$PROJECT_DIR$/Code/modifiedMasking.py" />
         <option value="$PROJECT_DIR$/Code/bayes.py" />
+        <option value="$PROJECT_DIR$/Code/modifiedBayes.py" />
+        <option value="$PROJECT_DIR$/Code/extendedROI.py" />
+        <option value="$PROJECT_DIR$/Code/kreiranjeROI.py" />
+        <option value="$PROJECT_DIR$/Code/extendedROICrop.py" />
+        <option value="$PROJECT_DIR$/Code/extendedPartition.py" />
+        <option value="$PROJECT_DIR$/Code/extendedMasking.py" />
+        <option value="$PROJECT_DIR$/Code/extendedBayes.py" />
       </list>
     </option>
   </component>
@@ -139,10 +193,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="35" />
-    <option name="width" value="980" />
-    <option name="height" value="1050" />
+    <option name="x" value="-8" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -152,18 +205,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="POOS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="POOS" type="462c0819:PsiDirectoryNode" />
+              <item name="POOS_Projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="POOS_Projekat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="POOS_Projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="POOS_Projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bayes">
+  <component name="RunManager" selected="Python.extendedBayes">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="POOS_Projekat" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -211,20 +269,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="bayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="extendedBayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="POOS_Projekat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/bayes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/extendedBayes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -233,20 +288,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="bayesClustering" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="extendedMasking" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="POOS_Projekat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/bayesClustering.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/extendedMasking.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -255,20 +307,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kMeans" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="extendedPartition" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="POOS_Projekat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/kMeans.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/extendedPartition.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -277,20 +326,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="kMeansWithoutAssignment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="extendedROI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="POOS_Projekat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/kMeansWithoutAssignment.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/extendedROI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -299,20 +345,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="podjela" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="extendedROICrop" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="POOS_Projekat" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/podjela.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/extendedROICrop.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -322,19 +365,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.podjela" />
-      <item itemvalue="Python.bayes" />
-      <item itemvalue="Python.kMeans" />
-      <item itemvalue="Python.bayesClustering" />
-      <item itemvalue="Python.kMeansWithoutAssignment" />
+      <item itemvalue="Python.extendedROI" />
+      <item itemvalue="Python.extendedROICrop" />
+      <item itemvalue="Python.extendedPartition" />
+      <item itemvalue="Python.extendedMasking" />
+      <item itemvalue="Python.extendedBayes" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.bayes" />
-        <item itemvalue="Python.bayesClustering" />
-        <item itemvalue="Python.kMeansWithoutAssignment" />
-        <item itemvalue="Python.kMeans" />
-        <item itemvalue="Python.podjela" />
+        <item itemvalue="Python.extendedBayes" />
+        <item itemvalue="Python.extendedMasking" />
+        <item itemvalue="Python.extendedPartition" />
+        <item itemvalue="Python.extendedROICrop" />
+        <item itemvalue="Python.extendedROI" />
       </list>
     </recent_temporary>
   </component>
@@ -361,22 +404,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2080537" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20758928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49930653" weight="0.28531468" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3986014" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39770868" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32733223" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.27412587" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5006935" side_tool="true" weight="0.33239037" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="10" visible="true" weight="0.23496504" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.34042552" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -393,40 +436,23 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/bayes.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/modifiedBayes.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DenoiseFilter/denoiseFilter.py" />
-    <entry file="file://$PROJECT_DIR$/projekat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spasavanjeSlika.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ContrastFilter/image.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/PIL/Image.py" />
-    <entry file="file://$PROJECT_DIR$/ContrastFilter/ContrastImages/image1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ContrastFilter/linearStretchingContrast.py" />
-    <entry file="file://$PROJECT_DIR$/ContrastFilter/ContrastImages/image2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ContrastFilter/arithmeticContrast.py" />
-    <entry file="file://$PROJECT_DIR$/BrightnessFilter/BrighterImages/image2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BrightnessFilter/BrighterImages/image1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/BrightnessFilter/image.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -493,31 +519,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/PIL/Image.py" />
-    <entry file="file://$PROJECT_DIR$/Code/linearStretchingContrast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="48" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/spasavanjeSlika.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/sharpenFilter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" selection-start-line="23" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/ROICrop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -548,9 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,24 +563,150 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/kreiranjeROI.py">
+    <entry file="file://$PROJECT_DIR$/Code/probabilityEqualization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/podjela.py">
+    <entry file="file://$PROJECT_DIR$/Code/izjednacavanje.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state>
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/bayes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
+        <state relative-caret-position="264">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/linearStretchingContrast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/sharpenFilter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" selection-start-line="23" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/extendedROICrop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/ROICrop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/extendedROI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/kreiranjeROI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/modifiedMasking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/modifiedPartition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="65" selection-end-line="68" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/podjela.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/maskiranje.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-end-line="83" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/extendedPartition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/extendedMasking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/extendedBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/modifiedBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="116" column="9" lean-forward="true" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

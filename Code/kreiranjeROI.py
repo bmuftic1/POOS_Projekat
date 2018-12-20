@@ -7,7 +7,7 @@ import os
 import spasavanjeSlika as ss #poziva se sa ss.SpasiSliku(...)
 
 #limfociti su od 1 do 30
-#nurolimfi od 31 do 60
+#neurolimfi od 31 do 60
 #ostatak od 61 do 90
 
 
@@ -32,7 +32,7 @@ def upisi(naziv, broj,x1,y1,x2,y2):
 def nadjiROI(c, I, i):
 	c = c*0
 	if (len(koordinate)!=2):
-		print("Ne moze se croppat")
+		print("Ne moze se croppati")
 		return
 	x1=koordinate[0][0]
 	y1=koordinate[0][1]
