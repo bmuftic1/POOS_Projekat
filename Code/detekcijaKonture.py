@@ -12,16 +12,13 @@ import copy
 import math as m
 
 os.chdir('..')
+here = os.path.dirname(os.path.abspath(__file__))
+exportGaussianNB = os.path.join(here, '../Model/modelExportGaussianNB.sav')
 
 lowerR = (170, 0, 0)
 upperR = (255, 130, 160)
 
-train = pd.read_csv('./DeskriptorTrain.csv').as_matrix()
-outcome = train[:, 7]
-train = train[:, 0:7]
-
-model = GaussianNB()
-model.fit(train, outcome)
+model = pickle.load(open(exportGaussianNB, 'rb'))
 
 for i in range(0,90):
 	try:
