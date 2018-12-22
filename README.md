@@ -4,8 +4,8 @@ A project for analysing different types of blood cells in images.
 
 The analysis of an image provided in the dataset can have three types of results:
 
-1. *Neutrophil*;
-2. *Lymphocyte*;
+1. *Lymphocyte*;
+2. *Neutrophil*;
 3. None of the above.
 
 The model used for training and testing is the **Naive Bayes Classification Model**.
@@ -21,7 +21,8 @@ Features:
 - [x] ROI cropping and filter applying;
 - [x] Creating descriptors for images;
 - [x] Model training and testing;
-- [x] Model exportation.
+- [x] Model exportation;
+- [x] Object detection (with or without the usage of a slider).
 
 © Muftić Belma, Lemeš Lamija & Krupalija Ehlimana
 
